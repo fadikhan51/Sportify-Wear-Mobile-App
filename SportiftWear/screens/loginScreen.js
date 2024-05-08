@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 import { Button, TextInput, IconButton } from 'react-native-paper';
 import { useState } from "react";
 import {MPLUSRounded1c_400Regular, MPLUSRounded1c_700Bold, useFonts} from '@expo-google-fonts/m-plus-rounded-1c'; 
@@ -40,7 +40,7 @@ export default LoginScreen = () => {
     }
 
   return (
-    <View style={styles.default}>
+    <ScrollView alwaysBounceVertical={false} contentContainerStyle={styles.default}>
       <View style={styles.logoDiv}>
         <Image style={styles.logo} source={require("../assets/logo.png")} />
       </View>
@@ -94,7 +94,7 @@ export default LoginScreen = () => {
             Continue with Twitter
         </Button>
       </View>
-    </View>
+    </ScrollView>
   );
   
 };
